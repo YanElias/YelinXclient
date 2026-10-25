@@ -26,6 +26,7 @@ public class YelinX {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new HudOverlay());
         MinecraftForge.EVENT_BUS.register(new ClientGuiHandler());
+        MinecraftForge.EVENT_BUS.register(new ClientLifecycle());
     }
 
     @SubscribeEvent

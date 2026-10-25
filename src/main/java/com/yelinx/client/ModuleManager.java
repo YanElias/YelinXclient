@@ -17,6 +17,7 @@ public final class ModuleManager {
         MODULES.add(new ClientModule("clock", "In-game Clock", "Mostra o horário local no HUD.", "HUD"));
         MODULES.add(new ClientModule("togglesprint", "Toggle Sprint", "Corre automaticamente ao andar para frente.", "PLAYER"));
         MODULES.add(new FullbrightModule());
+        MODULES.add(new FreelookModule());
         get("fps").setEnabled(true);
     }
 

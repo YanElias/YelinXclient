@@ -29,7 +29,7 @@ public class GuiModules extends GuiScreen {
         int cardWidth = (panelWidth - 42) / 2;
         int leftX = panelLeft + 14;
         int rightX = leftX + cardWidth + gap;
-        int startY = panelTop + 66;
+        int startY = panelTop + 69;
         int cardHeight = 70;
         int rowGap = 9;
 
@@ -42,7 +42,7 @@ public class GuiModules extends GuiScreen {
             buttonList.add(new YelinXModuleButton(100 + i, x, y, cardWidth, cardHeight, module));
             i++;
         }
-        buttonList.add(new YelinXButton(1, panelLeft + 14, panelTop + 280, panelWidth - 28, 26, "BACK"));
+        buttonList.add(new YelinXButton(1, panelLeft + 14, panelTop + 280, panelWidth - 28, 26, "BACK TO MENU"));
     }
 
     @Override
@@ -59,15 +59,19 @@ public class GuiModules extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
-        drawRect(0, 0, width, height, 0x66000000);
-        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 320, 0xF51B1B1B);
-        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD600);
-        drawString(fontRendererObj, "MODULE LIBRARY", panelLeft + 16, panelTop + 14, 0xFFFFD600);
-        drawString(fontRendererObj, "Small tools. Clear controls.", panelLeft + 16, panelTop + 31, 0xFFBDBDBD);
-        String count = ModuleManager.getModules().size() + " MODULES";
-        drawString(fontRendererObj, count, panelLeft + panelWidth - fontRendererObj.getStringWidth(count) - 16,
-                panelTop + 20, 0xFFF5F5F5);
-        drawRect(panelLeft + 14, panelTop + 51, panelLeft + panelWidth - 14, panelTop + 52, 0xFF393939);
+        drawRect(0, 0, width, height, 0x70000000);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 320, 0xF5161719);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD21C);
+        drawRect(panelLeft, panelTop + 3, panelLeft + 4, panelTop + 320, 0xFFFFD21C);
+
+        drawString(fontRendererObj, "MODULES", panelLeft + 16, panelTop + 15, 0xFFFFD21C);
+        drawString(fontRendererObj, "Turn your tools on or off.", panelLeft + 16, panelTop + 32, 0xFFB8BABE);
+        String count = ModuleManager.getModules().size() + " AVAILABLE";
+        drawString(fontRendererObj, count,
+                panelLeft + panelWidth - fontRendererObj.getStringWidth(count) - 16,
+                panelTop + 21, 0xFFF4F4F4);
+        drawRect(panelLeft + 14, panelTop + 54, panelLeft + panelWidth - 14, panelTop + 55, 0xFF393A3D);
+        drawString(fontRendererObj, "CLICK A CARD TO TOGGLE A MODULE", panelLeft + 16, panelTop + 263, 0xFF929499);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 

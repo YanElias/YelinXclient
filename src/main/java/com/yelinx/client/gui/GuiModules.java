@@ -10,6 +10,9 @@ import java.io.IOException;
 
 public class GuiModules extends GuiScreen {
     private final GuiScreen parent;
+    private int panelLeft;
+    private int panelTop;
+    private int panelWidth;
 
     public GuiModules(GuiScreen parent) {
         this.parent = parent;
@@ -18,19 +21,28 @@ public class GuiModules extends GuiScreen {
     @Override
     public void initGui() {
         buttonList.clear();
-        int panelWidth = Math.min(380, width - 24);
-        int left = (width - panelWidth) / 2;
-        int panelHeight = 100 + ModuleManager.getModules().size() * 40;
-        int top = Math.max(12, (height - panelHeight) / 2);
-        int buttonWidth = panelWidth - 32;
-        int y = top + 48;
-        int id = 100;
+        panelWidth = Math.min(540, width - 24);
+        panelLeft = (width - panelWidth) / 2;
+        panelTop = Math.max(8, (height - 320) / 2);
+
+        int gap = 10;
+        int cardWidth = (panelWidth - 42) / 2;
+        int leftX = panelLeft + 14;
+        int rightX = leftX + cardWidth + gap;
+        int startY = panelTop + 66;
+        int cardHeight = 70;
+        int rowGap = 9;
+
+        int i = 0;
         for (ClientModule module : ModuleManager.getModules()) {
-            buttonList.add(new YelinXButton(id++, left + 16, y, buttonWidth, 22,
-                    module.getName() + "  [" + (module.isEnabled() ? "ON" : "OFF") + "]"));
-            y += 40;
+            int col = i % 2;
+            int row = i / 2;
+            int x = col == 0 ? leftX : rightX;
+            int y = startY + row * (cardHeight + rowGap);
+            buttonList.add(new YelinXModuleButton(100 + i, x, y, cardWidth, cardHeight, module));
+            i++;
         }
-        buttonList.add(new YelinXButton(1, left + 16, Math.min(height - 32, y + 2), buttonWidth, 22, "BACK"));
+        buttonList.add(new YelinXButton(1, panelLeft + 14, panelTop + 280, panelWidth - 28, 26, "BACK"));
     }
 
     @Override
@@ -47,19 +59,15 @@ public class GuiModules extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
-        int panelWidth = Math.min(380, width - 24);
-        int left = (width - panelWidth) / 2;
-        int panelHeight = 100 + ModuleManager.getModules().size() * 40;
-        int top = Math.max(12, (height - panelHeight) / 2);
-        drawRect(left, top, left + panelWidth, top + panelHeight, 0xF0202020);
-        drawRect(left, top, left + panelWidth, top + 3, 0xFFFFD600);
-        drawCenteredString(fontRendererObj, "YelinX MODULES", width / 2, top + 13, 0xFFFFD600);
-        drawCenteredString(fontRendererObj, "Click a module to enable or disable it", width / 2, top + 29, 0xFFF5F5F5);
-        int i = 0;
-        for (ClientModule module : ModuleManager.getModules()) {
-            drawCenteredString(fontRendererObj, module.getDescription(), width / 2, top + 73 + i * 40, 0xFFBDBDBD);
-            i++;
-        }
+        drawRect(0, 0, width, height, 0x66000000);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 320, 0xF51B1B1B);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD600);
+        drawString(fontRendererObj, "MODULE LIBRARY", panelLeft + 16, panelTop + 14, 0xFFFFD600);
+        drawString(fontRendererObj, "Small tools. Clear controls.", panelLeft + 16, panelTop + 31, 0xFFBDBDBD);
+        String count = ModuleManager.getModules().size() + " MODULES";
+        drawString(fontRendererObj, count, panelLeft + panelWidth - fontRendererObj.getStringWidth(count) - 16,
+                panelTop + 20, 0xFFF5F5F5);
+        drawRect(panelLeft + 14, panelTop + 51, panelLeft + panelWidth - 14, panelTop + 52, 0xFF393939);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 

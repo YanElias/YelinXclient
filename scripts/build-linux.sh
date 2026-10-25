@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 find_java8() {
-  for candidate in "${JAVA8_HOME:-}" /usr/lib/jvm/java-8-openjdk-amd64 /usr/lib/jvm/java-8-openjdk /usr/lib/jvm/jdk8 /opt/java/openjdk; do
+  for candidate in "${JAVA8_HOME:-}" "${JAVA_HOME:-}" /usr/lib/jvm/java-8-openjdk-amd64 /usr/lib/jvm/java-8-openjdk /usr/lib/jvm/jdk8 /opt/java/openjdk; do
     if [[ -n "$candidate" && -x "$candidate/bin/java" ]]; then
       if "$candidate/bin/java" -version 2>&1 | grep -q 'version "1\.8'; then
         echo "$candidate"

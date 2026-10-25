@@ -3,7 +3,7 @@
     "modid": "yelinx",
     "name": "YelinX Client",
     "description": "A lightweight Minecraft 1.8.9 client mod with a yellow and graphite interface.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "mcversion": "1.8.9",
     "url": "https://github.com/YanElias/YelinXclient",
     "authorList": ["YanElias"],

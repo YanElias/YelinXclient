@@ -1,5 +1,14 @@
 Symbol range map extraction starting
-Processing 3 files
+Processing 12 files
+processing com/yelinx/client/ClientGuiHandler.java
+processing com/yelinx/client/ClientLifecycle.java
+processing com/yelinx/client/ClientModule.java
+processing com/yelinx/client/FullbrightModule.java
 processing com/yelinx/client/HudOverlay.java
+processing com/yelinx/client/ModuleManager.java
 processing com/yelinx/client/YelinX.java
+processing com/yelinx/client/gui/GuiModules.java
 processing com/yelinx/client/gui/GuiYelinX.java
+processing com/yelinx/client/gui/GuiYelinXMainMenu.java
+processing com/yelinx/client/gui/GuiYelinXPauseMenu.java
+processing com/yelinx/client/gui/YelinXButton.java

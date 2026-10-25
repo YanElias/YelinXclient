@@ -3,7 +3,6 @@ package com.yelinx.client;
 import com.yelinx.client.gui.GuiYelinX;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
-import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +15,7 @@ import org.lwjgl.input.Keyboard;
 public class YelinX {
     public static final String MODID = "yelinx";
     public static final String NAME = "YelinX Client";
-    public static final String VERSION = "0.1.0";
+    public static final String VERSION = "0.2.0";
 
     private static KeyBinding openMenuKey;
 
@@ -26,6 +25,8 @@ public class YelinX {
         ClientRegistry.registerKeyBinding(openMenuKey);
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new HudOverlay());
+        MinecraftForge.EVENT_BUS.register(new ClientGuiHandler());
+        MinecraftForge.EVENT_BUS.register(new ClientLifecycle());
     }
 
     @SubscribeEvent

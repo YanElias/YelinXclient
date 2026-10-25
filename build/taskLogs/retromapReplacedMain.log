@@ -33387,28 +33387,159 @@ RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraf
 RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraft/world/WorldSettings;Ljava/lang/String;)V 0 -> p_i2158_1_
 RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraft/world/WorldSettings;Ljava/lang/String;)V 1 -> p_i2158_2_
 RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraft/world/storage/WorldInfo;)V 0 -> p_i2159_1_
+Start Processing: com/yelinx/client/ClientGuiHandler.java
+[method, com/yelinx/client/ClientGuiHandler/onGuiOpen, (Lnet/minecraftforge/client/event/GuiOpenEvent;)V]
+No rename for class net/minecraftforge/client/event/GuiOpenEvent
+No rename for field net/minecraftforge/client/event/GuiOpenEvent/gui
+No rename for field net/minecraftforge/client/event/GuiOpenEvent/gui
+No rename for field net/minecraftforge/client/event/GuiOpenEvent/gui
+Rename class net/minecraft/client/gui/GuiMainMenu[597,608]::GuiMainMenu->GuiMainMenu
+No rename for field net/minecraftforge/client/event/GuiOpenEvent/gui
+No rename for field net/minecraftforge/client/event/GuiOpenEvent/gui
+Rename class net/minecraft/client/gui/GuiIngameMenu[701,714]::GuiIngameMenu->GuiIngameMenu
+No rename for field net/minecraftforge/client/event/GuiOpenEvent/gui
+Import: net.minecraft.client.gui.GuiIngameMenu
+Import: net.minecraft.client.gui.GuiMainMenu
+Adding 0 imports
+End  Processing: com/yelinx/client/ClientGuiHandler.java
+
+Start Processing: com/yelinx/client/ClientLifecycle.java
+[method, com/yelinx/client/ClientLifecycle/onWorldUnload, (Lnet/minecraftforge/event/world/WorldEvent$Unload;)V]
+No rename for class net/minecraftforge/event/world/WorldEvent/Unload
+No rename for field net/minecraftforge/event/world/WorldEvent/world
+No rename for field net/minecraftforge/event/world/WorldEvent/world
+Rename field net/minecraft/world/World/isRemote[300,308]::isRemote->field_72995_K
+[method, com/yelinx/client/ModuleManager/get, (Ljava/lang/String;)Lcom/yelinx/client/ClientModule;]
+[method, com/yelinx/client/ClientModule/setEnabled, (Z)V]
+Adding 0 imports
+End  Processing: com/yelinx/client/ClientLifecycle.java
+
+Start Processing: com/yelinx/client/ClientModule.java
+[method, com/yelinx/client/ClientModule/ClientModule, (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+FOUND CONSTR method com/yelinx/client/ClientModule/ClientModule (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V com/yelinx/client/ClientModule
+[method, com/yelinx/client/ClientModule/getId, ()Ljava/lang/String;]
+[method, com/yelinx/client/ClientModule/getName, ()Ljava/lang/String;]
+[method, com/yelinx/client/ClientModule/getDescription, ()Ljava/lang/String;]
+[method, com/yelinx/client/ClientModule/isEnabled, ()Z]
+[method, com/yelinx/client/ClientModule/setEnabled, (Z)V]
+[method, com/yelinx/client/ClientModule/onEnable, ()V]
+[method, com/yelinx/client/ClientModule/onDisable, ()V]
+[method, com/yelinx/client/ClientModule/onEnable, ()V]
+[method, com/yelinx/client/ClientModule/onDisable, ()V]
+End  Processing: com/yelinx/client/ClientModule.java
+
+Start Processing: com/yelinx/client/FullbrightModule.java
+[method, com/yelinx/client/FullbrightModule/FullbrightModule, ()V]
+FOUND CONSTR method com/yelinx/client/FullbrightModule/FullbrightModule ()V com/yelinx/client/FullbrightModule
+[method, com/yelinx/client/ClientModule/onEnable, ()V]
+Rename class net/minecraft/client/Minecraft[326,335]::Minecraft->Minecraft
+Rename class net/minecraft/client/Minecraft[341,350]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[351,363]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/gameSettings[382,394]::gameSettings->field_71474_y
+Rename field net/minecraft/client/Minecraft/gameSettings[438,450]::gameSettings->field_71474_y
+Rename field net/minecraft/client/settings/GameSettings/gammaSetting[452,464]::gammaSetting->field_74333_Y
+Rename field net/minecraft/client/Minecraft/gameSettings[482,494]::gameSettings->field_71474_y
+Rename field net/minecraft/client/settings/GameSettings/gammaSetting[496,508]::gammaSetting->field_74333_Y
+[method, com/yelinx/client/ClientModule/onDisable, ()V]
+Rename class net/minecraft/client/Minecraft[593,602]::Minecraft->Minecraft
+Rename class net/minecraft/client/Minecraft[608,617]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[618,630]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/gameSettings[649,661]::gameSettings->field_71474_y
+Rename field net/minecraft/client/Minecraft/gameSettings[689,701]::gameSettings->field_71474_y
+Rename field net/minecraft/client/settings/GameSettings/gammaSetting[703,715]::gammaSetting->field_74333_Y
+Import: net.minecraft.client.Minecraft
+Adding 0 imports
+End  Processing: com/yelinx/client/FullbrightModule.java
+
 Start Processing: com/yelinx/client/HudOverlay.java
-Rename class net/minecraft/client/Minecraft[241,250]::Minecraft->Minecraft
-Rename class net/minecraft/client/Minecraft[256,265]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[266,278]::getMinecraft->func_71410_x
+Rename class net/minecraft/client/Minecraft[391,400]::Minecraft->Minecraft
+Rename class net/minecraft/client/Minecraft[406,415]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[416,428]::getMinecraft->func_71410_x
 [method, com/yelinx/client/HudOverlay/onRenderOverlay, (Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V]
 No rename for class net/minecraftforge/client/event/RenderGameOverlayEvent/Text
-Rename field net/minecraft/client/Minecraft/thePlayer[387,396]::thePlayer->field_71439_g
-Rename field net/minecraft/client/Minecraft/gameSettings[415,427]::gameSettings->field_71474_y
-Rename field net/minecraft/client/settings/GameSettings/showDebugInfo[429,442]::showDebugInfo->field_74330_P
-Rename class net/minecraft/client/Minecraft[515,524]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getDebugFPS ()I[525,536]::getDebugFPS->func_175610_ah
-Rename field net/minecraft/client/Minecraft/fontRendererObj[563,578]::fontRendererObj->field_71466_p
-Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[577,597]::drawStringWithShadow->func_175063_a
+Rename field net/minecraft/client/Minecraft/thePlayer[537,546]::thePlayer->field_71439_g
+Rename field net/minecraft/client/Minecraft/gameSettings[565,577]::gameSettings->field_71474_y
+Rename field net/minecraft/client/settings/GameSettings/showDebugInfo[579,592]::showDebugInfo->field_74330_P
+[method, com/yelinx/client/ModuleManager/isEnabled, (Ljava/lang/String;)Z]
+Rename class net/minecraft/client/Minecraft[711,720]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getDebugFPS ()I[721,732]::getDebugFPS->func_175610_ah
+Rename field net/minecraft/client/Minecraft/fontRendererObj[763,778]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[777,797]::drawStringWithShadow->func_175063_a
+[method, com/yelinx/client/ModuleManager/isEnabled, (Ljava/lang/String;)Z]
+[method, java/lang/String/format, (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+[method, java/lang/Math/floor, (D)D]
+Rename field net/minecraft/client/Minecraft/thePlayer[1004,1013]::thePlayer->field_71439_g
+Rename field net/minecraft/entity/Entity/posX[1018,1022]::posX->field_70165_t
+[method, java/lang/Math/floor, (D)D]
+Rename field net/minecraft/client/Minecraft/thePlayer[1074,1083]::thePlayer->field_71439_g
+Rename field net/minecraft/entity/Entity/posY[1088,1092]::posY->field_70163_u
+[method, java/lang/Math/floor, (D)D]
+Rename field net/minecraft/client/Minecraft/thePlayer[1144,1153]::thePlayer->field_71439_g
+Rename field net/minecraft/entity/Entity/posZ[1158,1162]::posZ->field_70161_v
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1190,1205]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawStringWithShadow (Ljava/lang/String;FFI)I[1204,1224]::drawStringWithShadow->func_175063_a
+[method, com/yelinx/client/ModuleManager/isEnabled, (Ljava/lang/String;)Z]
+[method, com/yelinx/client/HudOverlay/drawKeystrokes, (Lnet/minecraft/client/gui/ScaledResolution;)V]
+Rename class net/minecraft/client/gui/ScaledResolution[1340,1356]::ScaledResolution->ScaledResolution
+[method, com/yelinx/client/HudOverlay/drawKeystrokes, (Lnet/minecraft/client/gui/ScaledResolution;)V]
+Rename class net/minecraft/client/gui/ScaledResolution[1412,1428]::ScaledResolution->ScaledResolution
+Rename method net/minecraft/client/gui/ScaledResolution/getScaledWidth ()I[1513,1527]::getScaledWidth->func_78326_a
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Keyboard/isKeyDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Keyboard/isKeyDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Keyboard/isKeyDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Keyboard/isKeyDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Mouse/isButtonDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Mouse/isButtonDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+[method, org/lwjgl/input/Keyboard/isKeyDown, (I)Z]
+[method, com/yelinx/client/HudOverlay/drawKey, (Ljava/lang/String;ZIII)V]
+Rename class net/minecraft/client/gui/Gui[2365,2368]::Gui->Gui
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2369,2377]::drawRect->func_73734_a
+Rename field net/minecraft/client/Minecraft/fontRendererObj[2431,2446]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/drawString (Ljava/lang/String;III)I[2445,2455]::drawString->func_78276_b
+Rename field net/minecraft/client/Minecraft/fontRendererObj[2497,2512]::fontRendererObj->field_71466_p
+Rename method net/minecraft/client/gui/FontRenderer/getStringWidth (Ljava/lang/String;)I[2511,2525]::getStringWidth->func_78256_a
 Import: net.minecraft.client.Minecraft
+Import: net.minecraft.client.gui.Gui
+Import: net.minecraft.client.gui.ScaledResolution
 Adding 0 imports
 End  Processing: com/yelinx/client/HudOverlay.java
 
+Start Processing: com/yelinx/client/ModuleManager.java
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, com/yelinx/client/ModuleManager/get, (Ljava/lang/String;)Lcom/yelinx/client/ClientModule;]
+[method, com/yelinx/client/ClientModule/setEnabled, (Z)V]
+[method, com/yelinx/client/ModuleManager/ModuleManager, ()V]
+FOUND CONSTR method com/yelinx/client/ModuleManager/ModuleManager ()V com/yelinx/client/ModuleManager
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+[method, java/util/Collections/unmodifiableList, (Ljava/util/List;)Ljava/util/List;]
+[method, com/yelinx/client/ModuleManager/get, (Ljava/lang/String;)Lcom/yelinx/client/ClientModule;]
+[method, com/yelinx/client/ClientModule/getId, ()Ljava/lang/String;]
+[method, java/lang/String/equals, (Ljava/lang/Object;)Z]
+[method, com/yelinx/client/ModuleManager/isEnabled, (Ljava/lang/String;)Z]
+[method, com/yelinx/client/ModuleManager/get, (Ljava/lang/String;)Lcom/yelinx/client/ClientModule;]
+[method, com/yelinx/client/ClientModule/isEnabled, ()Z]
+[method, com/yelinx/client/ModuleManager/toggle, (Ljava/lang/String;)V]
+[method, com/yelinx/client/ModuleManager/get, (Ljava/lang/String;)Lcom/yelinx/client/ClientModule;]
+[method, com/yelinx/client/ClientModule/setEnabled, (Z)V]
+[method, com/yelinx/client/ClientModule/isEnabled, ()Z]
+Adding 0 imports
+End  Processing: com/yelinx/client/ModuleManager.java
+
 Start Processing: com/yelinx/client/YelinX.java
-Rename class net/minecraft/client/settings/KeyBinding[898,908]::KeyBinding->KeyBinding
+Rename class net/minecraft/client/settings/KeyBinding[843,853]::KeyBinding->KeyBinding
 [method, com/yelinx/client/YelinX/init, (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V]
 No rename for class net/minecraftforge/fml/common/event/FMLInitializationEvent
-Rename class net/minecraft/client/settings/KeyBinding[1024,1034]::KeyBinding->KeyBinding
+Rename class net/minecraft/client/settings/KeyBinding[969,979]::KeyBinding->KeyBinding
 No rename for class net/minecraftforge/fml/client/registry/ClientRegistry
 [method, net/minecraftforge/fml/client/registry/ClientRegistry/registerKeyBinding, (Lnet/minecraft/client/settings/KeyBinding;)V]
 No rename for method net/minecraftforge/fml/client/registry/ClientRegistry/registerKeyBinding (Lnet/minecraft/client/settings/KeyBinding;)V
@@ -33420,52 +33551,352 @@ No rename for class net/minecraftforge/common/MinecraftForge
 No rename for field net/minecraftforge/common/MinecraftForge/EVENT_BUS
 [method, net/minecraftforge/fml/common/eventhandler/EventBus/register, (Ljava/lang/Object;)V]
 No rename for method net/minecraftforge/fml/common/eventhandler/EventBus/register (Ljava/lang/Object;)V
+No rename for class net/minecraftforge/common/MinecraftForge
+No rename for field net/minecraftforge/common/MinecraftForge/EVENT_BUS
+[method, net/minecraftforge/fml/common/eventhandler/EventBus/register, (Ljava/lang/Object;)V]
+No rename for method net/minecraftforge/fml/common/eventhandler/EventBus/register (Ljava/lang/Object;)V
+No rename for class net/minecraftforge/common/MinecraftForge
+No rename for field net/minecraftforge/common/MinecraftForge/EVENT_BUS
+[method, net/minecraftforge/fml/common/eventhandler/EventBus/register, (Ljava/lang/Object;)V]
+No rename for method net/minecraftforge/fml/common/eventhandler/EventBus/register (Ljava/lang/Object;)V
 [method, com/yelinx/client/YelinX/onKeyInput, (Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V]
 No rename for class net/minecraftforge/fml/common/gameevent/InputEvent/KeyInputEvent
-Rename method net/minecraft/client/settings/KeyBinding/isPressed ()Z[1407,1416]::isPressed->func_151468_f
-Rename class net/minecraft/client/Minecraft[1438,1447]::Minecraft->Minecraft
-Rename class net/minecraft/client/Minecraft[1453,1462]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1463,1475]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[1498,1507]::thePlayer->field_71439_g
-Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1542,1558]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/settings/KeyBinding/isPressed ()Z[1485,1494]::isPressed->func_151468_f
+Rename class net/minecraft/client/Minecraft[1516,1525]::Minecraft->Minecraft
+Rename class net/minecraft/client/Minecraft[1531,1540]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1541,1553]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[1576,1585]::thePlayer->field_71439_g
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1620,1636]::displayGuiScreen->func_147108_a
 Import: net.minecraft.client.Minecraft
 Import: net.minecraft.client.settings.KeyBinding
 Adding 0 imports
 End  Processing: com/yelinx/client/YelinX.java
 
+Start Processing: com/yelinx/client/gui/GuiModules.java
+Rename class net/minecraft/client/gui/GuiScreen[322,331]::GuiScreen->GuiScreen
+[method, com/yelinx/client/gui/GuiModules/GuiModules, (Lnet/minecraft/client/gui/GuiScreen;)V]
+FOUND CONSTR method com/yelinx/client/gui/GuiModules/GuiModules (Lnet/minecraft/client/gui/GuiScreen;)V com/yelinx/client/gui/GuiModules
+Rename class net/minecraft/client/gui/GuiScreen[363,372]::GuiScreen->GuiScreen
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[450,457]::initGui->func_73866_w_
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[476,486]::buttonList->field_146292_n
+[method, java/util/Collection/clear, ()V]
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[539,544]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[581,586]::width->field_146294_l
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+[method, java/util/Collection/size, ()I]
+[method, java/lang/Math/max, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/height[719,725]::height->field_146295_m
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[923,933]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, com/yelinx/client/ClientModule/getName, ()Ljava/lang/String;]
+[method, com/yelinx/client/ClientModule/isEnabled, ()Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[1127,1137]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/height[1186,1192]::height->field_146295_m
+Rename method net/minecraft/client/gui/GuiScreen/actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V[1282,1297]::actionPerformed->func_146284_a
+Rename class net/minecraft/client/gui/GuiButton[1296,1305]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1354,1356]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiButton/id[1386,1388]::id->field_146127_k
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+[method, java/util/Collection/size, ()I]
+Rename field net/minecraft/client/gui/GuiButton/id[1477,1479]::id->field_146127_k
+[method, com/yelinx/client/ModuleManager/toggle, (Ljava/lang/String;)V]
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+[method, java/util/List/get, (I)Ljava/lang/Object;]
+[method, com/yelinx/client/ClientModule/getId, ()Ljava/lang/String;]
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[1592,1599]::initGui->func_73866_w_
+Rename field net/minecraft/client/gui/GuiButton/id[1635,1637]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1670,1672]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1685,1701]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1755,1765]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[1822,1843]::drawDefaultBackground->func_146276_q_
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[1879,1884]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[1921,1926]::width->field_146294_l
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+[method, java/util/Collection/size, ()I]
+[method, java/lang/Math/max, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/height[2059,2065]::height->field_146295_m
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2103,2111]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2186,2194]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2259,2277]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2272,2287]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2306,2311]::width->field_146294_l
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2357,2375]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2370,2385]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2428,2433]::width->field_146294_l
+[method, com/yelinx/client/ModuleManager/getModules, ()Ljava/util/List;]
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2567,2585]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2580,2595]::fontRendererObj->field_146289_q
+[method, com/yelinx/client/ClientModule/getDescription, ()Ljava/lang/String;]
+Rename field net/minecraft/client/gui/GuiScreen/width[2621,2626]::width->field_146294_l
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[2714,2724]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[2798,2806]::keyTyped->func_73869_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[2905,2907]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[2920,2936]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[2962,2970]::keyTyped->func_73869_a
+Rename method net/minecraft/client/gui/GuiScreen/doesGuiPauseGame ()Z[3036,3052]::doesGuiPauseGame->func_73868_f
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiScreen
+Adding 0 imports
+End  Processing: com/yelinx/client/gui/GuiModules.java
+
 Start Processing: com/yelinx/client/gui/GuiYelinX.java
-Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[412,422]::drawScreen->func_73863_a
-Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[479,500]::drawDefaultBackground->func_146276_q_
-Rename field net/minecraft/client/gui/GuiScreen/width[517,522]::width->field_146294_l
-Rename field net/minecraft/client/gui/GuiScreen/height[561,567]::height->field_146295_m
-Rename field net/minecraft/client/gui/GuiScreen/width[607,612]::width->field_146294_l
-Rename field net/minecraft/client/gui/GuiScreen/height[654,660]::height->field_146295_m
-Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[689,697]::drawRect->func_73734_a
-Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[747,755]::drawRect->func_73734_a
-Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[805,823]::drawCenteredString->func_73732_a
-Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[818,833]::fontRendererObj->field_146289_q
-Rename field net/minecraft/client/gui/GuiScreen/width[851,856]::width->field_146294_l
-Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[898,916]::drawCenteredString->func_73732_a
-Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[911,926]::fontRendererObj->field_146289_q
-Rename field net/minecraft/client/gui/GuiScreen/width[953,958]::width->field_146294_l
-Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[1000,1008]::drawRect->func_73734_a
-Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1072,1090]::drawCenteredString->func_73732_a
-Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[1085,1100]::fontRendererObj->field_146289_q
-Rename field net/minecraft/client/gui/GuiScreen/width[1127,1132]::width->field_146294_l
-Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[1174,1182]::drawRect->func_73734_a
-Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1247,1265]::drawCenteredString->func_73732_a
-Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[1260,1275]::fontRendererObj->field_146289_q
-Rename field net/minecraft/client/gui/GuiScreen/width[1304,1309]::width->field_146294_l
-Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1352,1370]::drawCenteredString->func_73732_a
-Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[1365,1380]::fontRendererObj->field_146289_q
-Rename field net/minecraft/client/gui/GuiScreen/width[1404,1409]::width->field_146294_l
-Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1464,1474]::drawScreen->func_73863_a
-Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[1548,1556]::keyTyped->func_73869_a
-Rename field net/minecraft/client/gui/GuiScreen/mc[1669,1671]::mc->field_146297_k
-Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1684,1700]::displayGuiScreen->func_147108_a
-Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[1740,1748]::keyTyped->func_73869_a
-Rename method net/minecraft/client/gui/GuiScreen/doesGuiPauseGame ()Z[1824,1840]::doesGuiPauseGame->func_73868_f
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[298,305]::initGui->func_73866_w_
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[324,334]::buttonList->field_146292_n
+[method, java/util/Collection/clear, ()V]
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[388,393]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[427,432]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[478,484]::height->field_146295_m
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[511,521]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[594,604]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[682,692]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename method net/minecraft/client/gui/GuiScreen/actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V[800,815]::actionPerformed->func_146284_a
+Rename class net/minecraft/client/gui/GuiButton[814,823]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[872,874]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[893,895]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[908,924]::displayGuiScreen->func_147108_a
+Rename field net/minecraft/client/gui/GuiButton/id[969,971]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[990,992]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1005,1021]::displayGuiScreen->func_147108_a
+Rename class net/minecraft/client/gui/GuiOptions[1023,1033]::GuiOptions->GuiOptions
+Rename field net/minecraft/client/gui/GuiScreen/mc[1040,1042]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/gameSettings[1055,1067]::gameSettings->field_71474_y
+Rename field net/minecraft/client/gui/GuiButton/id[1096,1098]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1117,1119]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1132,1148]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1190,1200]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[1257,1278]::drawDefaultBackground->func_146276_q_
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[1314,1319]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[1356,1361]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[1408,1414]::height->field_146295_m
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[1441,1449]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[1515,1523]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1588,1606]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[1601,1616]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[1634,1639]::width->field_146294_l
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1685,1703]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[1698,1713]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[1745,1750]::width->field_146294_l
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1802,1812]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[1886,1894]::keyTyped->func_73869_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[1993,1995]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[2008,2024]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[2048,2056]::keyTyped->func_73869_a
+Rename method net/minecraft/client/gui/GuiScreen/doesGuiPauseGame ()Z[2122,2138]::doesGuiPauseGame->func_73868_f
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiOptions
 Import: net.minecraft.client.gui.GuiScreen
 Adding 0 imports
 End  Processing: com/yelinx/client/gui/GuiYelinX.java
+
+Start Processing: com/yelinx/client/gui/GuiYelinXMainMenu.java
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[447,454]::initGui->func_73866_w_
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[473,483]::buttonList->field_146292_n
+[method, java/util/Collection/clear, ()V]
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[537,542]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[576,581]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[632,638]::height->field_146295_m
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[686,696]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[779,789]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[877,887]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[982,992]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[1080,1090]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[1179,1189]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename method net/minecraft/client/gui/GuiScreen/actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V[1306,1321]::actionPerformed->func_146284_a
+Rename class net/minecraft/client/gui/GuiButton[1320,1329]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1382,1384]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1420,1422]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1435,1451]::displayGuiScreen->func_147108_a
+Rename class net/minecraft/client/gui/GuiSelectWorld[1453,1467]::GuiSelectWorld->GuiSelectWorld
+Rename field net/minecraft/client/gui/GuiScreen/mc[1503,1505]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1518,1534]::displayGuiScreen->func_147108_a
+Rename class net/minecraft/client/gui/GuiMultiplayer[1536,1550]::GuiMultiplayer->GuiMultiplayer
+Rename field net/minecraft/client/gui/GuiScreen/mc[1586,1588]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1601,1617]::displayGuiScreen->func_147108_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[1665,1667]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1680,1696]::displayGuiScreen->func_147108_a
+Rename class net/minecraft/client/gui/GuiOptions[1698,1708]::GuiOptions->GuiOptions
+Rename field net/minecraft/client/gui/GuiScreen/mc[1715,1717]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/gameSettings[1730,1742]::gameSettings->field_71474_y
+Rename field net/minecraft/client/gui/GuiScreen/mc[1774,1776]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1789,1805]::displayGuiScreen->func_147108_a
+Rename class net/minecraft/client/gui/GuiLanguage[1807,1818]::GuiLanguage->GuiLanguage
+Rename field net/minecraft/client/gui/GuiScreen/mc[1825,1827]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/gameSettings[1840,1852]::gameSettings->field_71474_y
+Rename field net/minecraft/client/gui/GuiScreen/mc[1855,1857]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/getLanguageManager ()Lnet/minecraft/client/resources/LanguageManager;[1870,1888]::getLanguageManager->func_135016_M
+Rename field net/minecraft/client/gui/GuiScreen/mc[1916,1918]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/shutdown ()V[1931,1939]::shutdown->func_71400_g
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[2029,2039]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[2096,2117]::drawDefaultBackground->func_146276_q_
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2122,2130]::drawRect->func_73734_a
+Rename field net/minecraft/client/gui/GuiScreen/width[2141,2146]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[2157,2163]::height->field_146295_m
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[2225,2230]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[2267,2272]::width->field_146294_l
+[method, java/lang/Math/max, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/height[2332,2338]::height->field_146295_m
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2367,2375]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2441,2449]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2514,2532]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2527,2542]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2553,2558]::width->field_146294_l
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2604,2622]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2617,2632]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2643,2648]::width->field_146294_l
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2694,2712]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2707,2722]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2749,2754]::width->field_146294_l
+Rename method net/minecraft/client/gui/Gui/drawString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2800,2810]::drawString->func_73731_b
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2813,2828]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/height[2851,2857]::height->field_146295_m
+Rename method net/minecraft/client/gui/Gui/drawString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2934,2944]::drawString->func_73731_b
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2947,2962]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2972,2977]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2989,3004]::fontRendererObj->field_146289_q
+Rename method net/minecraft/client/gui/FontRenderer/getStringWidth (Ljava/lang/String;)I[3004,3018]::getStringWidth->func_78256_a
+Rename field net/minecraft/client/gui/GuiScreen/height[3031,3037]::height->field_146295_m
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[3079,3089]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[3163,3171]::keyTyped->func_73869_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[3276,3284]::keyTyped->func_73869_a
+Rename method net/minecraft/client/gui/GuiScreen/doesGuiPauseGame ()Z[3350,3366]::doesGuiPauseGame->func_73868_f
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiLanguage
+Import: net.minecraft.client.gui.GuiMultiplayer
+Import: net.minecraft.client.gui.GuiOptions
+Import: net.minecraft.client.gui.GuiScreen
+Import: net.minecraft.client.gui.GuiSelectWorld
+Adding 0 imports
+End  Processing: com/yelinx/client/gui/GuiYelinXMainMenu.java
+
+Start Processing: com/yelinx/client/gui/GuiYelinXPauseMenu.java
+Rename method net/minecraft/client/gui/GuiScreen/initGui ()V[307,314]::initGui->func_73866_w_
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[333,343]::buttonList->field_146292_n
+[method, java/util/Collection/clear, ()V]
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[397,402]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[436,441]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[492,498]::height->field_146295_m
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[547,557]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[640,650]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[734,744]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename field net/minecraft/client/gui/GuiScreen/buttonList[832,842]::buttonList->field_146292_n
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+Rename method net/minecraft/client/gui/GuiScreen/actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V[975,990]::actionPerformed->func_146284_a
+Rename class net/minecraft/client/gui/GuiButton[989,998]::GuiButton->GuiButton
+Rename field net/minecraft/client/gui/GuiButton/id[1051,1053]::id->field_146127_k
+Rename field net/minecraft/client/gui/GuiScreen/mc[1105,1107]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1120,1136]::displayGuiScreen->func_147108_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[1157,1159]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/setIngameFocus ()V[1172,1186]::setIngameFocus->func_71381_h
+Rename field net/minecraft/client/gui/GuiScreen/mc[1247,1249]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1262,1278]::displayGuiScreen->func_147108_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[1358,1360]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1373,1389]::displayGuiScreen->func_147108_a
+Rename class net/minecraft/client/gui/GuiOptions[1391,1401]::GuiOptions->GuiOptions
+Rename field net/minecraft/client/gui/GuiScreen/mc[1408,1410]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/gameSettings[1423,1435]::gameSettings->field_71474_y
+Rename field net/minecraft/client/gui/GuiScreen/mc[1503,1505]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/theWorld[1518,1526]::theWorld->field_71441_e
+Rename field net/minecraft/client/gui/GuiScreen/mc[1563,1565]::mc->field_146297_k
+Rename field net/minecraft/client/Minecraft/theWorld[1578,1586]::theWorld->field_71441_e
+Rename method net/minecraft/world/World/sendQuittingDisconnectingPacket ()V[1592,1623]::sendQuittingDisconnectingPacket->func_72882_A
+Rename field net/minecraft/client/gui/GuiScreen/mc[1628,1630]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/loadWorld (Lnet/minecraft/client/multiplayer/WorldClient;)V[1643,1652]::loadWorld->func_71403_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[1697,1699]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[1712,1728]::displayGuiScreen->func_147108_a
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[1850,1860]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/drawDefaultBackground ()V[1917,1938]::drawDefaultBackground->func_146276_q_
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[1943,1951]::drawRect->func_73734_a
+Rename field net/minecraft/client/gui/GuiScreen/width[1962,1967]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/height[1978,1984]::height->field_146295_m
+[method, java/lang/Math/min, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/width[2046,2051]::width->field_146294_l
+Rename field net/minecraft/client/gui/GuiScreen/width[2088,2093]::width->field_146294_l
+[method, java/lang/Math/max, (II)I]
+Rename field net/minecraft/client/gui/GuiScreen/height[2153,2159]::height->field_146295_m
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2187,2195]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[2261,2269]::drawRect->func_73734_a
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2334,2352]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2347,2362]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2378,2383]::width->field_146294_l
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[2429,2447]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/gui/GuiScreen/fontRendererObj[2442,2457]::fontRendererObj->field_146289_q
+Rename field net/minecraft/client/gui/GuiScreen/width[2475,2480]::width->field_146294_l
+Rename method net/minecraft/client/gui/GuiScreen/drawScreen (IIF)V[2532,2542]::drawScreen->func_73863_a
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[2616,2624]::keyTyped->func_73869_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[2737,2739]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V[2752,2768]::displayGuiScreen->func_147108_a
+Rename field net/minecraft/client/gui/GuiScreen/mc[2785,2787]::mc->field_146297_k
+Rename method net/minecraft/client/Minecraft/setIngameFocus ()V[2800,2814]::setIngameFocus->func_71381_h
+Rename method net/minecraft/client/gui/GuiScreen/keyTyped (CI)V[2837,2845]::keyTyped->func_73869_a
+Rename method net/minecraft/client/gui/GuiScreen/doesGuiPauseGame ()Z[2911,2927]::doesGuiPauseGame->func_73868_f
+Import: net.minecraft.client.gui.GuiButton
+Import: net.minecraft.client.gui.GuiOptions
+Import: net.minecraft.client.gui.GuiScreen
+Adding 0 imports
+End  Processing: com/yelinx/client/gui/GuiYelinXPauseMenu.java
+
+Start Processing: com/yelinx/client/gui/YelinXButton.java
+[method, com/yelinx/client/gui/YelinXButton/YelinXButton, (IIIIILjava/lang/String;)V]
+FOUND CONSTR method com/yelinx/client/gui/YelinXButton/YelinXButton (IIIIILjava/lang/String;)V com/yelinx/client/gui/YelinXButton
+Rename method net/minecraft/client/gui/GuiButton/drawButton (Lnet/minecraft/client/Minecraft;II)V[529,539]::drawButton->func_146112_a
+Rename class net/minecraft/client/Minecraft[543,552]::Minecraft->Minecraft
+Rename field net/minecraft/client/gui/GuiButton/visible[596,603]::visible->field_146125_m
+Rename field net/minecraft/client/gui/GuiButton/hovered[633,640]::hovered->field_146123_n
+Rename field net/minecraft/client/gui/GuiButton/xPosition[660,669]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/yPosition[688,697]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/xPosition[731,740]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/width[748,753]::width->field_146120_f
+Rename field net/minecraft/client/gui/GuiButton/yPosition[775,784]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/height[792,798]::height->field_146121_g
+Rename field net/minecraft/client/gui/GuiButton/enabled[834,841]::enabled->field_146124_l
+Rename field net/minecraft/client/gui/GuiButton/hovered[865,872]::hovered->field_146123_n
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[909,917]::drawRect->func_73734_a
+Rename field net/minecraft/client/gui/GuiButton/xPosition[922,931]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/yPosition[938,947]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/xPosition[954,963]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/width[971,976]::width->field_146120_f
+Rename field net/minecraft/client/gui/GuiButton/yPosition[987,996]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/height[1004,1010]::height->field_146121_g
+Rename method net/minecraft/client/gui/Gui/drawRect (IIIII)V[1041,1049]::drawRect->func_73734_a
+Rename field net/minecraft/client/gui/GuiButton/xPosition[1054,1063]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/yPosition[1070,1079]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/xPosition[1086,1095]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/yPosition[1106,1115]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/height[1123,1129]::height->field_146121_g
+Rename field net/minecraft/client/gui/GuiButton/enabled[1139,1146]::enabled->field_146124_l
+Rename field net/minecraft/client/gui/GuiButton/enabled[1193,1200]::enabled->field_146124_l
+Rename field net/minecraft/client/gui/GuiButton/hovered[1211,1218]::hovered->field_146123_n
+Rename method net/minecraft/client/gui/Gui/drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V[1266,1284]::drawCenteredString->func_73732_a
+Rename field net/minecraft/client/Minecraft/fontRendererObj[1282,1297]::fontRendererObj->field_71466_p
+Rename field net/minecraft/client/gui/GuiButton/displayString[1297,1310]::displayString->field_146126_j
+Rename field net/minecraft/client/gui/GuiButton/xPosition[1313,1322]::xPosition->field_146128_h
+Rename field net/minecraft/client/gui/GuiButton/width[1330,1335]::width->field_146120_f
+Rename field net/minecraft/client/gui/GuiButton/yPosition[1366,1375]::yPosition->field_146129_i
+Rename field net/minecraft/client/gui/GuiButton/height[1384,1390]::height->field_146121_g
+Import: net.minecraft.client.Minecraft
+Import: net.minecraft.client.gui.GuiButton
+Adding 0 imports
+End  Processing: com/yelinx/client/gui/YelinXButton.java
 

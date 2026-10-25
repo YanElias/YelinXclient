@@ -16,7 +16,7 @@ public class YelinXButton extends GuiButton {
     @Override
     public void drawButton(Minecraft mc, int mouseX, int mouseY) {
         if (!visible) return;
-        boolean hovered = mouseX >= xPosition && mouseY >= yPosition
+        this.hovered = mouseX >= xPosition && mouseY >= yPosition
                 && mouseX < xPosition + width && mouseY < yPosition + height;
         int background = !enabled ? 0xFF202020 : (hovered ? HOVER : GRAPHITE);
         drawRect(xPosition, yPosition, xPosition + width, yPosition + height, background);
@@ -24,6 +24,5 @@ public class YelinXButton extends GuiButton {
         int color = enabled ? (hovered ? YELLOW : 0xFFF5F5F5) : MUTED;
         drawCenteredString(mc.fontRendererObj, displayString, xPosition + width / 2,
                 yPosition + (height - 8) / 2, color);
-        hovered = hovered;
     }
 }

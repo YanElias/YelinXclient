@@ -99,7 +99,7 @@ public class HudOverlay {
             if (!(object instanceof PotionEffect) || count >= 4) continue;
             PotionEffect effect = (PotionEffect) object;
             String name = effect.getEffectName();
-            String duration = Potion.getDurationString(effect, 1.0F);
+            String duration = Potion.getDurationString(effect);
             String text = name + "  " + duration;
             int panelWidth = mc.fontRendererObj.getStringWidth(text) + 18;
             int x = mc.displayWidth / 2;

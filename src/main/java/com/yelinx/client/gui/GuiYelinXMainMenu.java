@@ -20,7 +20,7 @@ public class GuiYelinXMainMenu extends GuiScreen {
         buttonList.clear();
         panelWidth = Math.min(500, width - 24);
         panelLeft = (width - panelWidth) / 2;
-        panelTop = Math.max(12, (height - 292) / 2);
+        panelTop = Math.max(12, (height - 240) / 2);
 
         int gap = 8;
         int buttonWidth = (panelWidth - 44) / 2;
@@ -55,7 +55,7 @@ public class GuiYelinXMainMenu extends GuiScreen {
         drawDefaultBackground();
         drawRect(0, 0, width, height, 0x66000000);
 
-        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 280, 0xF51B1B1B);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 240, 0xF51B1B1B);
         drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD600);
         drawRect(panelLeft + 14, panelTop + 15, panelLeft + 17, panelTop + 65, 0xFFFFD600);
 

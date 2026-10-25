@@ -1,0 +1,144 @@
+Symbol range map extraction starting
+Processing 3 files
+processing com/yelinx/client/HudOverlay.java
+@|com/yelinx/client/HudOverlay.java|8|25|com.yelinx.client|package|com.yelinx.client|(file)
+Class Start: com.yelinx.client.HudOverlay
+   @|com/yelinx/client/HudOverlay.java|241|250|Minecraft|class|net.minecraft.client.Minecraft
+   @|com/yelinx/client/HudOverlay.java|251|253|mc|field|com.yelinx.client.HudOverlay|mc|
+   @|com/yelinx/client/HudOverlay.java|256|265|Minecraft|class|net.minecraft.client.Minecraft
+   @|com/yelinx/client/HudOverlay.java|266|278|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: onRenderOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|com/yelinx/client/HudOverlay.java|319|334|onRenderOverlay|method|com.yelinx.client.HudOverlay|onRenderOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|com/yelinx/client/HudOverlay.java|335|362|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|com/yelinx/client/HudOverlay.java|363|368|event|param|com.yelinx.client.HudOverlay|onRenderOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|com/yelinx/client/HudOverlay.java|384|386|mc|field|com.yelinx.client.HudOverlay|mc
+      @|com/yelinx/client/HudOverlay.java|387|396|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com/yelinx/client/HudOverlay.java|408|410|mc|field|com.yelinx.client.HudOverlay|mc
+      @|com/yelinx/client/HudOverlay.java|411|423|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com/yelinx/client/HudOverlay.java|424|437|showDebugInfo|field|net.minecraft.client.settings.GameSettings|showDebugInfo
+      @|com/yelinx/client/HudOverlay.java|480|486|String|class|java.lang.String
+      @|com/yelinx/client/HudOverlay.java|510|519|Minecraft|class|net.minecraft.client.Minecraft
+      @|com/yelinx/client/HudOverlay.java|520|531|getDebugFPS|method|net.minecraft.client.Minecraft|getDebugFPS|()I
+      @|com/yelinx/client/HudOverlay.java|552|554|mc|field|com.yelinx.client.HudOverlay|mc
+      @|com/yelinx/client/HudOverlay.java|555|570|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com/yelinx/client/HudOverlay.java|571|591|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+   Method End: onRenderOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+Class End  : com.yelinx.client.HudOverlay
+endProcessing com/yelinx/client/HudOverlay.java
+
+processing com/yelinx/client/YelinX.java
+@|com/yelinx/client/YelinX.java|8|25|com.yelinx.client|package|com.yelinx.client|(file)
+Class Start: com.yelinx.client.YelinX
+   @|com/yelinx/client/YelinX.java|748|754|String|class|java.lang.String
+   @|com/yelinx/client/YelinX.java|755|760|MODID|field|com.yelinx.client.YelinX|MODID|
+   @|com/yelinx/client/YelinX.java|797|803|String|class|java.lang.String
+   @|com/yelinx/client/YelinX.java|804|808|NAME|field|com.yelinx.client.YelinX|NAME|
+   @|com/yelinx/client/YelinX.java|852|858|String|class|java.lang.String
+   @|com/yelinx/client/YelinX.java|859|866|VERSION|field|com.yelinx.client.YelinX|VERSION|
+   @|com/yelinx/client/YelinX.java|898|908|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com/yelinx/client/YelinX.java|909|920|openMenuKey|field|com.yelinx.client.YelinX|openMenuKey|
+   Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com/yelinx/client/YelinX.java|961|965|init|method|com.yelinx.client.YelinX|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com/yelinx/client/YelinX.java|966|988|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+      @|com/yelinx/client/YelinX.java|989|994|event|param|com.yelinx.client.YelinX|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|com/yelinx/client/YelinX.java|1006|1017|openMenuKey|field|com.yelinx.client.YelinX|openMenuKey
+      @|com/yelinx/client/YelinX.java|1024|1034|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com/yelinx/client/YelinX.java|1059|1067|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com/yelinx/client/YelinX.java|1068|1078|KEY_RSHIFT|field|org.lwjgl.input.Keyboard|KEY_RSHIFT
+      @|com/yelinx/client/YelinX.java|1114|1128|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com/yelinx/client/YelinX.java|1129|1147|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com/yelinx/client/YelinX.java|1148|1159|openMenuKey|field|com.yelinx.client.YelinX|openMenuKey
+      @|com/yelinx/client/YelinX.java|1170|1184|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
+      @|com/yelinx/client/YelinX.java|1185|1194|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com/yelinx/client/YelinX.java|1195|1203|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com/yelinx/client/YelinX.java|1219|1233|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
+      @|com/yelinx/client/YelinX.java|1234|1243|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com/yelinx/client/YelinX.java|1244|1252|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com/yelinx/client/YelinX.java|1257|1267|HudOverlay|class|com.yelinx.client.HudOverlay
+   Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+   Method Start: onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|com/yelinx/client/YelinX.java|1315|1325|onKeyInput|method|com.yelinx.client.YelinX|onKeyInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|com/yelinx/client/YelinX.java|1326|1350|InputEvent.KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
+      @|com/yelinx/client/YelinX.java|1351|1356|event|param|com.yelinx.client.YelinX|onKeyInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
+      @|com/yelinx/client/YelinX.java|1372|1383|openMenuKey|field|com.yelinx.client.YelinX|openMenuKey
+      @|com/yelinx/client/YelinX.java|1395|1406|openMenuKey|field|com.yelinx.client.YelinX|openMenuKey
+      @|com/yelinx/client/YelinX.java|1407|1416|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|com/yelinx/client/YelinX.java|1434|1443|Minecraft|class|net.minecraft.client.Minecraft
+      @|com/yelinx/client/YelinX.java|1449|1458|Minecraft|class|net.minecraft.client.Minecraft
+      @|com/yelinx/client/YelinX.java|1459|1471|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|com/yelinx/client/YelinX.java|1494|1503|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com/yelinx/client/YelinX.java|1534|1550|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com/yelinx/client/YelinX.java|1555|1564|GuiYelinX|class|com.yelinx.client.gui.GuiYelinX
+   Method End: onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+Class End  : com.yelinx.client.YelinX
+endProcessing com/yelinx/client/YelinX.java
+
+processing com/yelinx/client/gui/GuiYelinX.java
+@|com/yelinx/client/gui/GuiYelinX.java|8|29|com.yelinx.client.gui|package|com.yelinx.client.gui|(file)
+Class Start: com.yelinx.client.gui.GuiYelinX
+   @|com/yelinx/client/gui/GuiYelinX.java|210|216|YELLOW|field|com.yelinx.client.gui.GuiYelinX|YELLOW|
+   @|com/yelinx/client/gui/GuiYelinX.java|260|268|GRAPHITE|field|com.yelinx.client.gui.GuiYelinX|GRAPHITE|
+   @|com/yelinx/client/gui/GuiYelinX.java|312|317|PANEL|field|com.yelinx.client.gui.GuiYelinX|PANEL|
+   @|com/yelinx/client/gui/GuiYelinX.java|361|366|WHITE|field|com.yelinx.client.gui.GuiYelinX|WHITE|
+   Method Start: drawScreen(IIF)V
+      @|com/yelinx/client/gui/GuiYelinX.java|412|422|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com/yelinx/client/gui/GuiYelinX.java|427|433|mouseX|param|com.yelinx.client.gui.GuiYelinX|drawScreen|(IIF)V|mouseX|0
+      @|com/yelinx/client/gui/GuiYelinX.java|439|445|mouseY|param|com.yelinx.client.gui.GuiYelinX|drawScreen|(IIF)V|mouseY|1
+      @|com/yelinx/client/gui/GuiYelinX.java|453|465|partialTicks|param|com.yelinx.client.gui.GuiYelinX|drawScreen|(IIF)V|partialTicks|2
+      @|com/yelinx/client/gui/GuiYelinX.java|477|498|drawDefaultBackground|method|net.minecraft.client.gui.GuiScreen|drawDefaultBackground|()V
+      @|com/yelinx/client/gui/GuiYelinX.java|522|527|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|557|563|height|field|net.minecraft.client.gui.GuiScreen|height
+      @|com/yelinx/client/gui/GuiYelinX.java|595|600|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|633|639|height|field|net.minecraft.client.gui.GuiScreen|height
+      @|com/yelinx/client/gui/GuiYelinX.java|660|668|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com/yelinx/client/gui/GuiYelinX.java|695|703|GRAPHITE|field|com.yelinx.client.gui.GuiYelinX|GRAPHITE
+      @|com/yelinx/client/gui/GuiYelinX.java|714|722|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com/yelinx/client/gui/GuiYelinX.java|750|756|YELLOW|field|com.yelinx.client.gui.GuiYelinX|YELLOW
+      @|com/yelinx/client/gui/GuiYelinX.java|768|786|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com/yelinx/client/gui/GuiYelinX.java|787|802|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com/yelinx/client/gui/GuiYelinX.java|821|826|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|842|848|YELLOW|field|com.yelinx.client.gui.GuiYelinX|YELLOW
+      @|com/yelinx/client/gui/GuiYelinX.java|859|877|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com/yelinx/client/gui/GuiYelinX.java|878|893|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com/yelinx/client/gui/GuiYelinX.java|921|926|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|942|947|WHITE|field|com.yelinx.client.gui.GuiYelinX|WHITE
+      @|com/yelinx/client/gui/GuiYelinX.java|959|967|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1011|1016|PANEL|field|com.yelinx.client.gui.GuiYelinX|PANEL
+      @|com/yelinx/client/gui/GuiYelinX.java|1027|1045|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1046|1061|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com/yelinx/client/gui/GuiYelinX.java|1089|1094|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|1110|1115|WHITE|field|com.yelinx.client.gui.GuiYelinX|WHITE
+      @|com/yelinx/client/gui/GuiYelinX.java|1127|1135|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1180|1185|PANEL|field|com.yelinx.client.gui.GuiYelinX|PANEL
+      @|com/yelinx/client/gui/GuiYelinX.java|1196|1214|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1215|1230|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com/yelinx/client/gui/GuiYelinX.java|1260|1265|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|1282|1287|WHITE|field|com.yelinx.client.gui.GuiYelinX|WHITE
+      @|com/yelinx/client/gui/GuiYelinX.java|1299|1317|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1318|1333|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com/yelinx/client/gui/GuiYelinX.java|1358|1363|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com/yelinx/client/gui/GuiYelinX.java|1409|1419|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1420|1426|mouseX|param|com.yelinx.client.gui.GuiYelinX|drawScreen|(IIF)V|mouseX|0
+      @|com/yelinx/client/gui/GuiYelinX.java|1428|1434|mouseY|param|com.yelinx.client.gui.GuiYelinX|drawScreen|(IIF)V|mouseY|1
+      @|com/yelinx/client/gui/GuiYelinX.java|1436|1448|partialTicks|param|com.yelinx.client.gui.GuiYelinX|drawScreen|(IIF)V|partialTicks|2
+   Method End: drawScreen(IIF)V
+   Method Start: keyTyped(CI)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1491|1499|keyTyped|method|net.minecraft.client.gui.GuiScreen|keyTyped|(CI)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1536|1547|IOException|class|java.io.IOException
+      @|com/yelinx/client/gui/GuiYelinX.java|1505|1514|typedChar|param|com.yelinx.client.gui.GuiYelinX|keyTyped|(CI)V|typedChar|0
+      @|com/yelinx/client/gui/GuiYelinX.java|1520|1527|keyCode|param|com.yelinx.client.gui.GuiYelinX|keyTyped|(CI)V|keyCode|1
+      @|com/yelinx/client/gui/GuiYelinX.java|1562|1569|keyCode|param|com.yelinx.client.gui.GuiYelinX|keyTyped|(CI)V|keyCode|1
+      @|com/yelinx/client/gui/GuiYelinX.java|1573|1581|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com/yelinx/client/gui/GuiYelinX.java|1582|1592|KEY_ESCAPE|field|org.lwjgl.input.Keyboard|KEY_ESCAPE
+      @|com/yelinx/client/gui/GuiYelinX.java|1608|1610|mc|field|net.minecraft.client.gui.GuiScreen|mc
+      @|com/yelinx/client/gui/GuiYelinX.java|1611|1627|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1670|1678|keyTyped|method|net.minecraft.client.gui.GuiScreen|keyTyped|(CI)V
+      @|com/yelinx/client/gui/GuiYelinX.java|1679|1688|typedChar|param|com.yelinx.client.gui.GuiYelinX|keyTyped|(CI)V|typedChar|0
+      @|com/yelinx/client/gui/GuiYelinX.java|1690|1697|keyCode|param|com.yelinx.client.gui.GuiYelinX|keyTyped|(CI)V|keyCode|1
+   Method End: keyTyped(CI)V
+   Method Start: doesGuiPauseGame()Z
+      @|com/yelinx/client/gui/GuiYelinX.java|1750|1766|doesGuiPauseGame|method|net.minecraft.client.gui.GuiScreen|doesGuiPauseGame|()Z
+   Method End: doesGuiPauseGame()Z
+Class End  : com.yelinx.client.gui.GuiYelinX
+endProcessing com/yelinx/client/gui/GuiYelinX.java
+

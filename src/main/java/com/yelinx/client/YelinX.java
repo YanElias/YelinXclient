@@ -43,6 +43,7 @@ public class YelinX {
         if (event.phase != TickEvent.Phase.END) return;
         Minecraft mc = Minecraft.getMinecraft();
         if (mc.thePlayer == null || mc.theWorld == null) return;
+        FreelookModule.update();
         if (ModuleManager.isEnabled("togglesprint")
                 && mc.gameSettings.keyBindForward.isKeyDown()
                 && !mc.gameSettings.keyBindSneak.isKeyDown()

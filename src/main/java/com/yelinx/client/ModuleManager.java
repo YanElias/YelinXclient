@@ -10,8 +10,9 @@ public final class ModuleManager {
     static {
         MODULES.add(new ClientModule("fps", "FPS Counter", "Mostra FPS e a marca YelinX no HUD."));
         MODULES.add(new ClientModule("coordinates", "Coordinates", "Mostra suas coordenadas XYZ."));
-        MODULES.add(new ClientModule("keystrokes", "Keystrokes", "Mostra as teclas WASD pressionadas."));
+        MODULES.add(new ClientModule("keystrokes", "Keystrokes", "Mostra teclas e botões pressionados."));
         MODULES.add(new FullbrightModule());
+        get("fps").setEnabled(true);
     }
 
     private ModuleManager() { }

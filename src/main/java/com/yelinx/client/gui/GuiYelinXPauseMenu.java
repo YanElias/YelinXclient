@@ -11,23 +11,25 @@ public class GuiYelinXPauseMenu extends GuiScreen {
     private int panelLeft;
     private int panelTop;
     private int panelWidth;
+    private int panelHeight;
 
     @Override
     public void initGui() {
         buttonList.clear();
-        panelWidth = Math.min(420, width - 24);
+        panelWidth = Math.min(440, width - 24);
+        panelHeight = Math.min(250, height - 24);
         panelLeft = (width - panelWidth) / 2;
-        panelTop = Math.max(12, (height - 224) / 2);
+        panelTop = (height - panelHeight) / 2;
 
         int gap = 8;
         int buttonWidth = (panelWidth - 44) / 2;
         int leftX = panelLeft + 14;
         int rightX = leftX + buttonWidth + gap;
-        int startY = panelTop + 91;
-        buttonList.add(new YelinXButton(0, leftX, startY, buttonWidth, 30, "BACK TO GAME"));
-        buttonList.add(new YelinXButton(1, rightX, startY, buttonWidth, 30, "MODULES"));
-        buttonList.add(new YelinXButton(2, leftX, startY + 40, buttonWidth, 30, "OPTIONS"));
-        buttonList.add(new YelinXButton(3, rightX, startY + 40, buttonWidth, 30, "SAVE & QUIT"));
+        int startY = panelTop + 105;
+        buttonList.add(new YelinXButton(0, leftX, startY, buttonWidth, 28, "BACK TO GAME"));
+        buttonList.add(new YelinXButton(1, rightX, startY, buttonWidth, 28, "MODULES"));
+        buttonList.add(new YelinXButton(2, leftX, startY + 36, buttonWidth, 28, "SETTINGS"));
+        buttonList.add(new YelinXButton(3, rightX, startY + 36, buttonWidth, 28, "SAVE & QUIT"));
     }
 
     @Override
@@ -57,13 +59,17 @@ public class GuiYelinXPauseMenu extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
-        drawRect(0, 0, width, height, 0x77000000);
-        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 184, 0xF51B1B1B);
-        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD600);
-        drawString(fontRendererObj, "PAUSED", panelLeft + 16, panelTop + 17, 0xFFFFD600);
-        drawString(fontRendererObj, "YelinX Client", panelLeft + 16, panelTop + 33, 0xFFF5F5F5);
-        drawString(fontRendererObj, "Your world is waiting.", panelLeft + 16, panelTop + 52, 0xFFBDBDBD);
-        drawRect(panelLeft + 14, panelTop + 72, panelLeft + panelWidth - 14, panelTop + 73, 0xFF393939);
+        drawRect(0, 0, width, height, 0x78000000);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + panelHeight, 0xF5161719);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD21C);
+        drawRect(panelLeft, panelTop + 3, panelLeft + 4, panelTop + panelHeight, 0xFFFFD21C);
+
+        drawString(fontRendererObj, "GAME PAUSED", panelLeft + 16, panelTop + 18, 0xFFFFD21C);
+        drawString(fontRendererObj, "Take a break. Your world is safe.", panelLeft + 16, panelTop + 35, 0xFFF4F4F4);
+        drawString(fontRendererObj, "YelinX Client  /  Minecraft 1.8.9", panelLeft + 16, panelTop + 53, 0xFF929499);
+        drawRect(panelLeft + 14, panelTop + 76, panelLeft + panelWidth - 14, panelTop + 77, 0xFF393A3D);
+        drawString(fontRendererObj, "QUICK ACTIONS", panelLeft + 16, panelTop + 87, 0xFFB8BABE);
+
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 

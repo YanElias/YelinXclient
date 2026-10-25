@@ -11,19 +11,30 @@ import org.lwjgl.input.Keyboard;
 import java.io.IOException;
 
 public class GuiYelinXMainMenu extends GuiScreen {
+    private int panelLeft;
+    private int panelTop;
+    private int panelWidth;
+
     @Override
     public void initGui() {
         buttonList.clear();
-        int buttonWidth = Math.min(260, width - 40);
-        int x = (width - buttonWidth) / 2;
-        int startY = height / 2 - 8;
-        int gap = 25;
-        buttonList.add(new YelinXButton(0, x, startY, buttonWidth, 21, "SINGLEPLAYER"));
-        buttonList.add(new YelinXButton(1, x, startY + gap, buttonWidth, 21, "MULTIPLAYER"));
-        buttonList.add(new YelinXButton(2, x, startY + gap * 2, buttonWidth, 21, "YELINX MODULES"));
-        buttonList.add(new YelinXButton(3, x, startY + gap * 3, buttonWidth, 21, "OPTIONS"));
-        buttonList.add(new YelinXButton(4, x, startY + gap * 4, buttonWidth, 21, "LANGUAGE"));
-        buttonList.add(new YelinXButton(5, x, startY + gap * 5, buttonWidth, 21, "QUIT"));
+        panelWidth = Math.min(500, width - 24);
+        panelLeft = (width - panelWidth) / 2;
+        panelTop = Math.max(12, (height - 240) / 2);
+
+        int gap = 8;
+        int buttonWidth = (panelWidth - 44) / 2;
+        int leftX = panelLeft + 14;
+        int rightX = leftX + buttonWidth + gap;
+        int startY = panelTop + 94;
+        int rowGap = 36;
+
+        buttonList.add(new YelinXButton(0, leftX, startY, buttonWidth, 28, "SINGLEPLAYER"));
+        buttonList.add(new YelinXButton(1, rightX, startY, buttonWidth, 28, "MULTIPLAYER"));
+        buttonList.add(new YelinXButton(2, leftX, startY + rowGap, buttonWidth, 28, "YELINX MODULES"));
+        buttonList.add(new YelinXButton(3, rightX, startY + rowGap, buttonWidth, 28, "OPTIONS"));
+        buttonList.add(new YelinXButton(4, leftX, startY + rowGap * 2, buttonWidth, 28, "LANGUAGE"));
+        buttonList.add(new YelinXButton(5, rightX, startY + rowGap * 2, buttonWidth, 28, "QUIT"));
     }
 
     @Override
@@ -42,18 +53,23 @@ public class GuiYelinXMainMenu extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
-        drawRect(0, 0, width, height, 0x55000000);
-        int panelWidth = Math.min(340, width - 24);
-        int left = (width - panelWidth) / 2;
-        int top = Math.max(10, height / 2 - 133);
-        drawRect(left, top, left + panelWidth, top + 75, 0xD8202020);
-        drawRect(left, top, left + panelWidth, top + 3, 0xFFFFD600);
-        drawCenteredString(fontRendererObj, "YelinX", width / 2, top + 13, 0xFFFFD600);
-        drawCenteredString(fontRendererObj, "CLIENT", width / 2, top + 29, 0xFFF5F5F5);
-        drawCenteredString(fontRendererObj, "YOUR GAME. YOUR STYLE.", width / 2, top + 50, 0xFFBDBDBD);
-        drawString(fontRendererObj, "Minecraft 1.8.9", 8, height - 18, 0xFFBDBDBD);
-        String version = "YelinX 0.2.0";
-        drawString(fontRendererObj, version, width - fontRendererObj.getStringWidth(version) - 8, height - 18, 0xFFFFD600);
+        drawRect(0, 0, width, height, 0x66000000);
+
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 240, 0xF51B1B1B);
+        drawRect(panelLeft, panelTop, panelLeft + panelWidth, panelTop + 3, 0xFFFFD600);
+        drawRect(panelLeft + 14, panelTop + 15, panelLeft + 17, panelTop + 65, 0xFFFFD600);
+
+        drawString(fontRendererObj, "YelinX", panelLeft + 27, panelTop + 17, 0xFFFFD600);
+        drawString(fontRendererObj, "CLIENT", panelLeft + 27, panelTop + 31, 0xFFF5F5F5);
+        drawString(fontRendererObj, "A cleaner way to play.", panelLeft + 27, panelTop + 49, 0xFFBDBDBD);
+        drawRect(panelLeft + 14, panelTop + 77, panelLeft + panelWidth - 14, panelTop + 78, 0xFF393939);
+        drawString(fontRendererObj, "QUICK ACCESS", panelLeft + 14, panelTop + 84, 0xFFBDBDBD);
+
+        String gameVersion = "MINECRAFT 1.8.9";
+        String clientVersion = "YELINX 0.2.0";
+        drawString(fontRendererObj, gameVersion, 8, height - 16, 0xFFBDBDBD);
+        drawString(fontRendererObj, clientVersion, width - fontRendererObj.getStringWidth(clientVersion) - 8,
+                height - 16, 0xFFFFD600);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 

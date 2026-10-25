@@ -1,24 +1,24 @@
 package com.yelinx.client.gui;
 
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiIngameMenu;
 import net.minecraft.client.gui.GuiOptions;
+import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Keyboard;
 
 import java.io.IOException;
 
-public class GuiYelinXPauseMenu extends GuiIngameMenu {
+public class GuiYelinXPauseMenu extends GuiScreen {
     @Override
     public void initGui() {
         buttonList.clear();
         int buttonWidth = Math.min(260, width - 40);
         int x = (width - buttonWidth) / 2;
-        int startY = height / 2 - 36;
-        int gap = 27;
-        buttonList.add(new YelinXButton(0, x, startY, buttonWidth, 22, "BACK TO GAME"));
-        buttonList.add(new YelinXButton(1, x, startY + gap, buttonWidth, 22, "MODULES"));
-        buttonList.add(new YelinXButton(2, x, startY + gap * 2, buttonWidth, 22, "OPTIONS"));
-        buttonList.add(new YelinXButton(3, x, startY + gap * 3, buttonWidth, 22, "SAVE & QUIT TO TITLE"));
+        int startY = height / 2 - 32;
+        int gap = 26;
+        buttonList.add(new YelinXButton(0, x, startY, buttonWidth, 21, "BACK TO GAME"));
+        buttonList.add(new YelinXButton(1, x, startY + gap, buttonWidth, 21, "MODULES"));
+        buttonList.add(new YelinXButton(2, x, startY + gap * 2, buttonWidth, 21, "OPTIONS"));
+        buttonList.add(new YelinXButton(3, x, startY + gap * 3, buttonWidth, 21, "SAVE & QUIT TO TITLE"));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class GuiYelinXPauseMenu extends GuiIngameMenu {
                 }
                 mc.displayGuiScreen(new GuiYelinXMainMenu());
                 break;
-            default: super.actionPerformed(button);
+            default: break;
         }
     }
 
@@ -51,11 +51,11 @@ public class GuiYelinXPauseMenu extends GuiIngameMenu {
         drawRect(0, 0, width, height, 0x55000000);
         int panelWidth = Math.min(340, width - 24);
         int left = (width - panelWidth) / 2;
-        int top = Math.max(16, height / 2 - 100);
-        drawRect(left, top, left + panelWidth, top + 58, 0xD8202020);
+        int top = Math.max(12, height / 2 - 93);
+        drawRect(left, top, left + panelWidth, top + 54, 0xD8202020);
         drawRect(left, top, left + panelWidth, top + 3, 0xFFFFD600);
-        drawCenteredString(fontRendererObj, "GAME PAUSED", width / 2, top + 14, 0xFFFFD600);
-        drawCenteredString(fontRendererObj, "YelinX Client", width / 2, top + 32, 0xFFF5F5F5);
+        drawCenteredString(fontRendererObj, "GAME PAUSED", width / 2, top + 12, 0xFFFFD600);
+        drawCenteredString(fontRendererObj, "YelinX Client", width / 2, top + 30, 0xFFF5F5F5);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
@@ -66,4 +66,7 @@ public class GuiYelinXPauseMenu extends GuiIngameMenu {
             mc.setIngameFocus();
         } else super.keyTyped(typedChar, keyCode);
     }
+
+    @Override
+    public boolean doesGuiPauseGame() { return true; }
 }

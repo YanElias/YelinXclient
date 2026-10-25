@@ -39,9 +39,10 @@ public class YelinXModuleButton extends GuiButton {
 
         List<String> lines = mc.fontRendererObj.listFormattedStringToWidth(
                 module.getDescription(), Math.max(40, width - 24));
-        int lineY = yPosition + 29;
-        for (int i = 0; i < lines.size() && i < 2; i++) {
-            mc.fontRendererObj.drawString(lines.get(i), xPosition + 12, lineY + i * 10, 0xFFBDBDBD);
+        int lineY = yPosition + 28;
+        int maxLines = height >= 47 ? 2 : 1;
+        for (int i = 0; i < lines.size() && i < maxLines; i++) {
+            mc.fontRendererObj.drawString(lines.get(i), xPosition + 12, lineY + i * 9, 0xFFBDBDBD);
         }
     }
 }

@@ -6,7 +6,7 @@ public class FullbrightModule extends ClientModule {
     private float previousGamma;
 
     public FullbrightModule() {
-        super("fullbright", "Fullbright", "Aumenta a luminosidade do jogo.");
+        super("fullbright", "Fullbright", "Aumenta a luminosidade do jogo.", "VISUAL");
     }
 
     @Override
@@ -21,8 +21,6 @@ public class FullbrightModule extends ClientModule {
     @Override
     protected void onDisable() {
         Minecraft mc = Minecraft.getMinecraft();
-        if (mc.gameSettings != null) {
-            mc.gameSettings.gammaSetting = previousGamma;
-        }
+        if (mc.gameSettings != null) mc.gameSettings.gammaSetting = previousGamma;
     }
 }

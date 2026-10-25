@@ -9,13 +9,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
 
 @Mod(modid = YelinX.MODID, name = YelinX.NAME, version = YelinX.VERSION, acceptedMinecraftVersions = "[1.8.9]")
 public class YelinX {
     public static final String MODID = "yelinx";
     public static final String NAME = "YelinX Client";
-    public static final String VERSION = "0.2.0";
+    public static final String VERSION = "0.3.0";
 
     private static KeyBinding openMenuKey;
 
@@ -33,9 +34,20 @@ public class YelinX {
     public void onKeyInput(InputEvent.KeyInputEvent event) {
         if (openMenuKey != null && openMenuKey.isPressed()) {
             Minecraft mc = Minecraft.getMinecraft();
-            if (mc.thePlayer != null) {
-                mc.displayGuiScreen(new GuiYelinX());
-            }
+            if (mc.thePlayer != null) mc.displayGuiScreen(new GuiYelinX());
+        }
+    }
+
+    @SubscribeEvent
+    public void onClientTick(TickEvent.ClientTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) return;
+        Minecraft mc = Minecraft.getMinecraft();
+        if (mc.thePlayer == null || mc.theWorld == null) return;
+        if (ModuleManager.isEnabled("togglesprint")
+                && mc.gameSettings.keyBindForward.isKeyDown()
+                && !mc.gameSettings.keyBindSneak.isKeyDown()
+                && mc.thePlayer.getFoodStats().getFoodLevel() > 6) {
+            mc.thePlayer.setSprinting(true);
         }
     }
 }

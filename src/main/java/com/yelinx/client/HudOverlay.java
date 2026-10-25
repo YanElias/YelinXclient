@@ -3,6 +3,7 @@ package com.yelinx.client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -98,7 +99,7 @@ public class HudOverlay {
             if (!(object instanceof PotionEffect) || count >= 4) continue;
             PotionEffect effect = (PotionEffect) object;
             String name = effect.getEffectName();
-            String duration = PotionEffect.getDurationString(effect);
+            String duration = Potion.getDurationString(effect, 1.0F);
             String text = name + "  " + duration;
             int panelWidth = mc.fontRendererObj.getStringWidth(text) + 18;
             int x = mc.displayWidth / 2;
